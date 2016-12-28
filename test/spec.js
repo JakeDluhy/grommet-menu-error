@@ -8,11 +8,17 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
+import React from 'react';
 import { expect } from 'chai';
+import { mount } from 'enzyme';
+
+import AboutPage from '../pages/about';
 
 describe('test suite', () => {
 
-  it('test', () => {
+  it('breaks grommet', () => {
+    const wrapper = mount(<AboutPage />);
+    wrapper.find('.spec-role-menu').simulate('click');
     expect(true).to.be.equal.true;
   });
 
